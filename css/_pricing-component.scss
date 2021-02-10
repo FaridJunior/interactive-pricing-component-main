@@ -1,0 +1,105 @@
+.pricing-component {
+  --box-shadow: 0 1px 2.2px rgba(0, 0, 0, 0.011), 0 2.4px 5.3px rgba(0, 0, 0, 0.016),
+    0 4.5px 10px rgba(0, 0, 0, 0.02), 0 8px 17.9px rgba(0, 0, 0, 0.024),
+    0 15px 33.4px rgba(0, 0, 0, 0.029), 0 36px 80px rgba(0, 0, 0, 0.04);
+  --horizontal-padding: 3rem;
+  @media (max-width: 800px) {
+    --horizontal-padding: 1rem;
+    // .pricing-component__controllers {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // }
+  }
+}
+
+.pricing-component {
+  background: #fff;
+  border-radius: 0.5rem;
+  margin-bottom: 5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.pricing-component__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem var(--horizontal-padding) 0;
+  color: var(--grayish-blue);
+  font-size: 0.86rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+
+  .pricing-component__price {
+    color: var(--dark-desaturated-blue);
+    font-size: 2.74em;
+    font-weight: 800;
+    letter-spacing: -1px;
+    padding-right: 4px;
+  }
+
+  p:first-of-type {
+    text-transform: uppercase;
+  }
+  p:last-of-type {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.pricing-component__controllers {
+  padding: 1rem var(--horizontal-padding);
+  > div:last-child {
+    padding: 2rem 0.6rem 1rem 0;
+    padding-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.billing-mode {
+  font-size: 0.74rem;
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  padding-right: 0.5rem;
+  gap: 0.5rem;
+  color: var(--grayish-blue);
+}
+
+.discount-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--light-red);
+  border-radius: 100px;
+  padding: 2px 5px;
+  letter-spacing: -1;
+  background: hsl(15, 100%, 70%, 0.3);
+}
+
+.pricing-component__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.9rem var(--horizontal-padding);
+  border-top: 1px solid hsl(225, 20%, 60%, 0.2);
+}
+
+.pricing__features {
+  list-style: georgian inside url(../images/icon-check.svg);
+  list-style-type: none;
+  color: var(--grayish-blue);
+  display: grid;
+  gap: 0.5rem;
+  font-weight: 800;
+  font-size: 0.7rem;
+}
+
+.pricing-component__start-btn {
+  background: var(--dark-desaturated-blue);
+  color: var(--pale-blue);
+  border-radius: 100px;
+  border: 0;
+  padding: 0.74rem 2.5rem;
+}

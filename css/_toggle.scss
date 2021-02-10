@@ -1,0 +1,43 @@
+.toggle {
+  $color_checkbox_info: var(--soft-cyan);
+  $color_checkbox_default: var(--light-grayish-blue);
+  $transition: 0.15s linear;
+  $width: 40px;
+  $height: $width/2;
+
+  cursor: pointer;
+  .toggle_shape {
+    width: $width;
+    height: $height;
+    display: block;
+    border: 2px solid $color_checkbox_default;
+    border-radius: $height;
+    background-color: $color_checkbox_default;
+    position: relative;
+    transition: $transition;
+    &:after {
+      transition: $transition;
+      content: "";
+      width: $width/2 - 4;
+      height: $height - 4;
+      display: block;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: $transition;
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+    &:checked + .toggle_shape {
+      border-color: $color_checkbox_info;
+      background-color: $color_checkbox_info;
+      &:after {
+        left: $width/2;
+      }
+    }
+  }
+}

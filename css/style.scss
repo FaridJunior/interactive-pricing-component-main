@@ -1,0 +1,37 @@
+@import "initial";
+@import "header";
+@import "pricing-component";
+@import "customSlider";
+@import "toggle";
+@import "attribution";
+
+.wrapper {
+  width: 38%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  @media (max-width: 800px) {
+    width: 94%;
+    .pricing-component__header {
+      flex-direction: column;
+      // align-content: center;
+    }
+    .pricing-component__footer {
+      gap: 1rem;
+      flex-direction: column;
+      // align-content: center;
+    }
+  }
+}
+
+.design {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  border-bottom: 8px solid salmon;
+  opacity: 0.6;
+}
