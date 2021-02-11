@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     price = price - price * yearlyBillingDiscount;
     pageviewsDisplay.textContent = pageViews;
-    priceDisplay.textContent = price;
+    priceDisplay.textContent = price.toFixed(2);
   }
 
   slider.addEventListener("input", handlePrice);
