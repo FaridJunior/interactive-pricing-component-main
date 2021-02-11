@@ -8,30 +8,59 @@
 .wrapper {
   width: 38%;
   margin: 0 auto;
+  min-width: 500px;
   min-height: 100vh;
   display: grid;
   align-items: center;
   overflow: hidden;
-  @media (max-width: 800px) {
+}
+
+@media (max-width: 650px) {
+  .wrapper {
     width: 94%;
-    .pricing-component__header {
-      flex-direction: column;
-      // align-content: center;
-    }
-    .pricing-component__footer {
-      gap: 1rem;
-      flex-direction: column;
-      // align-content: center;
-    }
+    min-width: 300px;
+  }
+  .pricing-component__header {
+    flex-direction: column;
+  }
+
+  .pricing-component__footer {
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .pricing__features {
+    align-self: stretch;
+    justify-items: center;
+  }
+  .pricing-component__controllers {
+    display: flex;
+    justify-content: center;
   }
 }
 
-.design {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: 100;
-  border-bottom: 8px solid salmon;
-  opacity: 0.6;
+@media (max-width: 390px) {
+  .header__title {
+    font-size: 1.3rem;
+  }
+  .header__subtitle {
+    margin: 0 auto;
+    max-inline-size: 24ch;
+  }
+  .billing-mode {
+    font-size: 0.64rem;
+  }
+  .pricing-component__header {
+    grid-template-columns: 1fr;
+    p:first-of-type {
+      order: 1;
+      justify-self: center;
+    }
+    p:last-of-type {
+      order: 3;
+      justify-self: center;
+    }
+    .slider {
+      order: 2;
+    }
+  }
 }

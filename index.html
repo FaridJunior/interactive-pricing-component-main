@@ -14,7 +14,6 @@
     <title>Frontend Mentor | Interactive pricing component | Mohamed Farid</title>
   </head>
   <body>
-    <img src="./design/desktop-design.jpg" alt="" class="design" />
     <div class="bg-pattern">
       <svg xmlns="http://www.w3.org/2000/svg" width="146" height="145">
         <g fill="none" fill-rule="evenodd" stroke="#CFD8EF">
@@ -35,29 +34,25 @@
             <span class="pricing-component__price">$16.00 </span>
             /month
           </p>
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="slider CustomSlider"
+            id="price-range"
+          />
         </div>
         <div class="pricing-component__controllers">
-          <div class="">
-            <input
-              type="range"
-              min="1"
-              max="100"
-              value="50"
-              class="slider CustomSlider"
-              id="price-range"
-            />
+          <div class="billing-mode">
+            <p>Monthly Billing</p>
+            <label class="toggle">
+              <input type="checkbox" />
+              <div class="toggle_shape"></div>
+            </label>
+            <p>Yearly Billing</p>
           </div>
-          <div class="">
-            <div class="billing-mode">
-              <p>Monthly Billing</p>
-              <label class="toggle">
-                <input type="checkbox" />
-                <div class="toggle_shape"></div>
-              </label>
-              <p>Yearly Billing</p>
-            </div>
-            <span class="discount-badge">25% discount </span>
-          </div>
+          <span class="discount-badge">25% discount </span>
         </div>
 
         <div class="pricing-component__footer">
@@ -74,7 +69,7 @@
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="#">Mohamed Farid</a>.
+        Coded by <a href="https://mohamedfarid.ninja">Mohamed Farid</a>.
       </div>
     </div>
     <script src="./js/script.js"></script>
