@@ -29,16 +29,16 @@
       </header>
       <article class="pricing-component">
         <div class="pricing-component__header">
-          <p>100K pageviews</p>
+          <p><span class="pageviews-display">100K</span> pageviews</p>
           <p>
-            <span class="pricing-component__price">$16.00 </span>
+            <span class="pricing-component__price">$<span class="price-display">16.00</span> </span>
             /month
           </p>
           <input
             type="range"
-            min="1"
-            max="100"
-            value="50"
+            min="0"
+            max="4"
+            value="3"
             class="slider CustomSlider"
             id="price-range"
           />
@@ -47,7 +47,7 @@
           <div class="billing-mode">
             <p>Monthly Billing</p>
             <label class="toggle">
-              <input type="checkbox" />
+              <input type="checkbox" id="billing-mode" />
               <div class="toggle_shape"></div>
             </label>
             <p>Yearly Billing</p>
